@@ -89,7 +89,7 @@ html {
 body {
     padding: 0;
     background-color: #F6F6F6;
-    background-image: url("https://studenter.miun.se/~bjed1500/images/snow_background.jpg");
+    background-image: url("https://studenter.miun.se/~bjed1500/images/snow_background2.jpg");
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #222120;
@@ -106,11 +106,15 @@ a {
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    color: #c40a60;
+    color: #0a7aa7;
     font-size: 3rem;
     font-weight: 900;
     line-height: 1.3;
-    text-align: center;
+    text-align: left;
+}
+
+.h1-a {
+    color: #0b4c97;
 }
 
 h2 {
@@ -140,20 +144,254 @@ p {
     font-weight: bold;
 }
 
+#page-contationer {
+    position: relative;
+    min-height: 100VH;
+}
+
+#contentWrapper {
+    padding-bottom: 14rem;
+}
 
 /* HEADER*/
 
 header {
-    background-color: aliceblue;
+    background-color: #e7e9eb;
     min-height: 8em;
+    display: flex;
+    justify-content: space-between;
 }
 .headWrapper {
     display: flex;
     flex-direction: row;
     max-width: 1080px;
+    width: 100%;
     margin: 0 auto;
+    align-items: end;
+    justify-content: space-between;
+    background-color: #e7e9eb;
+    z-index: 100;
 }
+
+.headWrapper h1 {
+    margin-bottom: 20px;
+    margin-left: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0b4c97;
+    font-size: 5rem;
+}
+
 .nav ul {
     display: flex;
     flex-direction: row;
+    list-style: none;
+    margin-bottom: 20px;
+    margin-right: 8em;
+}
+
+.li {
+    padding-right: 1em;
+}
+
+.menuText {
+    color: #3a3837;
+    text-decoration: none;
+    line-height: 2em;
+    font-size: 1.8rem;
+}
+.menuText:hover {
+    color: #b60799;
+    text-decoration: underline;
+}
+
+
+/* MAIN*/
+main {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.2em;
+    z-index: 99;
+    margin-top: 2em;
+    position: relative;
+    padding-bottom: 6em;
+
+}
+
+.startart {
+    padding-left: 1em;
+    max-width: 50em;
+}
+
+.paddh1 {
+    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-left: 2em;
+}
+
+/* Footer*/
+footer {
+    background-color: #e7e9eb;
+    height: 14rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+.absolute-foot {
+   /* position: absolute;*/
+}
+#footInfo {
+    display: flex;
+    flex-direction: row;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: end;
+    justify-content: space-between;
+    background-color: #e7e9eb;
+    z-index: 198;
+    position: relative;
+    margin-top: 2em;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+
+}
+.foot-ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.lifoot {
+    padding-bottom: 1em;
+}
+
+.afoot {
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+.afoot :hover {
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+/* imgWrapper snöbilder*/
+.imgWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgArticle {
+    padding: 1em;
+}
+
+/* SNOWFLAXES */
+.snowflakes {
+	width: 100%; height: 1200px;
+	position: absolute; top: -90px; left: 0;
+}
+
+i, i:after, i:before { background: white; }
+i {
+	display: inline-block;
+	-webkit-animation: snowflakes 3s linear 2s 20;
+	-moz-animation: snowflakes 3s linear 2s 20;
+	position: relative;
+}
+i:after, i:before {
+	height: 100%;
+	width: 100%;
+	content: ".";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	-webkit-transform: rotate(120deg);
+}
+i:before { -webkit-transform: rotate(240deg); }
+
+@-webkit-keyframes snowflakes {
+	0% {
+		-webkit-transform: translate3d(0,0,0) rotate(0deg) scale(0.6);
+	}
+	100% {
+		-webkit-transform: translate3d(15px, 1200px, 0px) rotate(360deg) scale(0.6);
+	};
+}
+
+.snowflakes i:nth-child(3n) {
+	width: 16px; height: 4px;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: 30;
+	-webkit-transform-origin: right -45px;
+}
+
+.snowflakes i:nth-child(3n+1) {
+	width: 24px; height: 6px;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-iteration-count: 45;
+	-webkit-transform-origin: right -30px;
+}
+
+.snowflakes i:nth-child(3n+2) {
+	width: 32px; height: 8px;
+	-webkit-animation-duration: 8s;
+	-webkit-animation-iteration-count: 60;
+	-webkit-transform-origin: right -15px;
+}
+	
+/* different delays so they don't all start at the same time */
+.snowflakes i:nth-child(7n) {
+  opacity:.3;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-timing-function:ease-in;
+}
+.snowflakes i:nth-child(7n+1) {
+  opacity:.4;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-timing-function:ease-out;
+}
+.snowflakes i:nth-child(7n+2) {
+  opacity:.5;
+  -webkit-animation-delay: 1.5s;
+  -webkit-animation-timing-function:linear;
+}
+.snowflakes i:nth-child(7n+3) {
+  opacity:.6;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-timing-function:ease-in;
+}
+.snowflakes i:nth-child(7n+4) {
+  opacity:.7;
+  -webkit-animation-delay: 2.5s;
+  -webkit-animation-timing-function:linear;
+}
+.snowflakes i:nth-child(7n+5) {
+  opacity:.8;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-timing-function:ease-out;
+}
+.snowflakes i:nth-child(7n+6) {
+  opacity:.9;
+  -webkit-animation-delay: 3.5s;
+  -webkit-animation-timing-function:ease-in;
+}
+
+@media screen and (min-width: 990px) {
+    .imgWrapper {
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;      
+    }
+
+    .imgArticle {
+        width: 50%;
+    }
+    
 }
